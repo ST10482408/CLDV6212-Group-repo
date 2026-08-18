@@ -7,8 +7,7 @@ namespace CoffeeAndChill.Interface
 {
     internal class ItableStorageService
     {
-        namespace Coffe_Chill.Functions.Interfaces
-    {
+    
         public interface ITableStorageService
         {
             Task<MenuItems> CreateMenuItemAsync(CreateMenuItemRequest request);
@@ -37,4 +36,4 @@ namespace CoffeeAndChill.Interface
     }
 
 }
-}
+
