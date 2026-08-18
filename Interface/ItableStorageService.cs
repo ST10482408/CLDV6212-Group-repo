@@ -5,9 +5,7 @@ using System.Text;
 
 namespace CoffeeAndChill.Interface
 {
-    internal class ItableStorageService
-    {
-    
+      
         public interface ITableStorageService
         {
             Task<MenuItems> CreateMenuItemAsync(CreateMenuItemRequest request);
@@ -32,7 +30,7 @@ namespace CoffeeAndChill.Interface
 
 
 
-        }
+        
     }
 
 }

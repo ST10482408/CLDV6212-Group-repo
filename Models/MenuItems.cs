@@ -1,7 +1,8 @@
 ﻿using Azure;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Azure.Data.Tables;
+using CoffeeAndChill.Interface;
+
+
 
 namespace CoffeeAndChill.Models
 {
