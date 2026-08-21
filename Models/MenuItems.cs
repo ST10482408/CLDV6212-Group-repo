@@ -1,4 +1,5 @@
 ﻿using Azure;
+using Azure.Data.Tables;   
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -23,7 +24,7 @@ namespace CoffeeAndChill.Models
         public string Description { get; set; } = string.Empty;
 
         //selling price
-        public Decimal Price { get; set; }
+        public double Price { get; set; }
 
         // For ordering items within a category on the menu
         public int DisplayOrder { get; set; }

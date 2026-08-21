@@ -7,17 +7,20 @@ using System.Collections.Generic;
 using System.Net;
 using System.Text;
 using System.Text.Json;
+using CoffeeAndChill.Interface;
+
+
 
 namespace Coffe_Chill.Functions
 {
-    public class CreateMenuItemFunction
+    public class CreateMenuItemsFunction
     {
         private readonly ITableStorageService _tableStorageService;
-        private readonly ILogger<CreateMenuItemFunction> _logger;
+        private readonly ILogger<CreateMenuItemsFunction> _logger;
 
-        public CreateMenuItemFunction(
+        public CreateMenuItemsFunction(
             ITableStorageService tableStorageService,
-            ILogger<CreateMenuItemFunction> logger)
+            ILogger<CreateMenuItemsFunction> logger)
         {
             _tableStorageService = tableStorageService;
             _logger = logger;
@@ -53,7 +56,7 @@ namespace Coffe_Chill.Functions
                 if (string.IsNullOrWhiteSpace(request.Name))
                     validationErrors.Add("Name is required.");
 
-                if (string.IsNullOrWhiteSpace(request.Category))
+                if (string.IsNullOrWhiteSpace(request.Catergory))
                     validationErrors.Add("Category is required.");
 
                 if (string.IsNullOrWhiteSpace(request.SKU))
@@ -76,7 +79,7 @@ namespace Coffe_Chill.Functions
 
                 _logger.LogInformation(
                     "Creating menu item: {Name} | Category: {Category} | SKU: {SKU} | Price: {Price:C}",
-                    request.Name, request.Category, request.SKU, request.Price);
+                    request.Name, request.Catergory, request.SKU, request.Price);
 
                 var menuItem = await _tableStorageService.CreateMenuItemAsync(request);
  

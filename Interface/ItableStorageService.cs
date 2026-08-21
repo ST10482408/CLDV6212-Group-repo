@@ -2,11 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-
-namespace CoffeeAndChill.Interface
-{
-    internal class ItableStorageService
-    {
     
         public interface ITableStorageService
         {
@@ -33,7 +28,5 @@ namespace CoffeeAndChill.Interface
 
 
         }
-    }
-
-}
+    
 
